@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="container">
+  <h1>🌤 Weather App</h1>
+  <div class="search">
+    <input type="text" id="cityInput" placeholder="Enter city name">
+    <button onclick="getWeather()">Get Weather</button>
+  </div>
+
+  <div id="weatherCard" class="card hidden">
+    <h2 id="cityName"></h2>
+    <p id="description"></p>
+
+    <div class="grid">
+      <p>🌡 Temperature: <span id="temp"></span> °C</p>
+      <p>🤔 Feels like: <span id="feels"></span> °C</p>
+      <p>💨 Wind: <span id="wind"></span> m/s</p>
+      <p>🌧 Rain (3h): <span id="rain"></span> mm</p>
+      <p>🌍 Country: <span id="country"></span></p>
+      <p>📍 Coords: <span id="coords"></span></p>
+    </div>
+  </div>
+
+  <hr style="margin:30px 0">
+  <div class="search">
+    <input type="text" id="countryInput" placeholder="Enter country name (Kazakhstan, France)">
+    <button onclick="getCountry()">Get Country Info</button>
+  </div>
+
+  <div id="countryCard" class="card hidden">
+    <h2>🌍 Country Info</h2>
+    <div id="countryData"></div>
+  </div>
+
+  <div id="newsCard" class="card hidden">
+    <h2>📰 News</h2>
+    <div id="newsData"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
